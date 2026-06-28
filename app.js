@@ -3,7 +3,11 @@ const screens = document.querySelectorAll(".screen");
 
 function showScreen(screenId) {
   navLinks.forEach((link) => {
-    link.classList.toggle("is-active", link.dataset.screen === screenId);
+    const isPrimaryNavLink = link.classList.contains("nav-link");
+    link.classList.toggle(
+      "is-active",
+      isPrimaryNavLink && link.dataset.screen === screenId,
+    );
   });
 
   screens.forEach((screen) => {
@@ -17,4 +21,4 @@ navLinks.forEach((link) => {
   });
 });
 
-showScreen("daily-puzzle");
+showScreen("homepage");

@@ -9,7 +9,9 @@
   <body>
     <div class="page-shell">
       <header class="site-header">
-        <p class="eyebrow">Book Crossword</p>
+        <button class="brand-mark" type="button" data-screen="homepage">
+          <span class="eyebrow">Book Crossword</span>
+        </button>
         <div class="header-copy">
           <h1>Your bookshelf comes back as a daily game.</h1>
           <p>
@@ -28,7 +30,67 @@
       </header>
 
       <main class="screen-stack">
-        <section class="screen is-active" id="daily-puzzle" aria-labelledby="daily-puzzle-title">
+        <section class="screen is-active homepage-screen" id="homepage" aria-labelledby="homepage-title">
+          <div class="hero-layout">
+            <section class="hero-card">
+              <p class="screen-kicker">A daily crossword from the books you've read</p>
+              <h2 id="homepage-title">A tiny reading game you come back to every morning.</h2>
+              <p class="hero-copy">
+                Add your books. Get a small crossword every day. Remember characters,
+                places, symbols, and ideas without feeling like you're studying.
+              </p>
+              <div class="hero-actions">
+                <button class="hero-button hero-button-primary" type="button" data-screen="books-read">
+                  Start your bookshelf
+                </button>
+                <button class="hero-button" type="button" data-screen="daily-puzzle">
+                  Try demo puzzle
+                </button>
+              </div>
+            </section>
+
+            <aside class="hero-sidecar panel">
+              <p class="panel-label">How it works</p>
+              <ol class="loop-list">
+                <li>Add books you have already read.</li>
+                <li>The app builds clues from your shelf.</li>
+                <li>You get one short crossword each day.</li>
+              </ol>
+              <p class="side-note">Short, personal, and built to feel more like play than homework.</p>
+            </aside>
+          </div>
+
+          <section class="explain-grid" aria-label="Product explanation">
+            <article class="panel explain-card">
+              <p class="panel-label">Daily Puzzle</p>
+              <h3>One puzzle, no pressure</h3>
+              <p>
+                The daily crossword should take about five to ten minutes and feel
+                closer to a quick game than a study session.
+              </p>
+            </article>
+
+            <article class="panel explain-card">
+              <p class="panel-label">Books Read</p>
+              <h3>Your shelf shapes the game</h3>
+              <p>
+                The books you add become the source for clues, so the puzzle gets
+                more personal as your shelf grows.
+              </p>
+            </article>
+
+            <article class="panel explain-card">
+              <p class="panel-label">Core loop</p>
+              <h3>Remember what you read</h3>
+              <p>
+                The product works best when it quietly brings back names, places,
+                and ideas you had almost forgotten.
+              </p>
+            </article>
+          </section>
+        </section>
+
+        <section class="screen" id="daily-puzzle" aria-labelledby="daily-puzzle-title">
           <div class="screen-heading">
             <p class="screen-kicker">Today's play</p>
             <h2 id="daily-puzzle-title">Daily Puzzle</h2>

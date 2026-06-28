@@ -34,6 +34,14 @@ button {
   cursor: pointer;
 }
 
+.brand-mark {
+  justify-self: start;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: inherit;
+}
+
 .page-shell {
   width: min(1120px, calc(100% - 2rem));
   margin: 0 auto;
@@ -125,6 +133,90 @@ button {
 
 .screen-heading {
   margin-bottom: 1rem;
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.8fr);
+  gap: 1rem;
+}
+
+.hero-card {
+  padding: 1.75rem;
+  border: 1px solid rgba(127, 79, 36, 0.16);
+  border-radius: 28px;
+  background:
+    linear-gradient(145deg, rgba(255, 253, 247, 0.95), rgba(246, 233, 210, 0.9)),
+    var(--bg-alt);
+  box-shadow: var(--shadow);
+}
+
+.hero-card h2 {
+  margin: 0.4rem 0 0;
+  font-size: clamp(2.2rem, 4.4vw, 4.7rem);
+  line-height: 0.95;
+  max-width: 11ch;
+}
+
+.hero-copy,
+.side-note,
+.explain-card p {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.hero-copy {
+  margin: 1rem 0 0;
+  max-width: 44rem;
+  font-size: 1.08rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.25rem;
+}
+
+.hero-button {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.85rem 1.2rem;
+  background: var(--bg-alt);
+  color: var(--text);
+}
+
+.hero-button-primary {
+  background: var(--text);
+  color: var(--bg-alt);
+  border-color: var(--text);
+}
+
+.hero-sidecar {
+  align-self: stretch;
+}
+
+.loop-list {
+  margin: 0.85rem 0 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.85rem;
+  line-height: 1.45;
+}
+
+.side-note {
+  margin: 1rem 0 0;
+}
+
+.explain-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.explain-card h3 {
+  margin: 0.35rem 0 0;
 }
 
 .screen-heading h2 {
@@ -260,12 +352,18 @@ button {
 }
 
 @media (max-width: 840px) {
+  .hero-layout,
+  .explain-grid,
   .screen-layout,
   .shelf-layout {
     grid-template-columns: 1fr;
   }
 
   .header-copy h1 {
+    max-width: none;
+  }
+
+  .hero-card h2 {
     max-width: none;
   }
 }
@@ -283,6 +381,10 @@ button {
 
   .panel-heading {
     flex-direction: column;
+  }
+
+  .hero-card {
+    padding: 1.3rem;
   }
 
   .book-card {
