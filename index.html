@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Crossword</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <p class="eyebrow">Book Crossword</p>
+        <div class="header-copy">
+          <h1>Your bookshelf comes back as a daily game.</h1>
+          <p>
+            Add books you have read and come back for a small crossword built
+            from your own shelf.
+          </p>
+        </div>
+        <nav class="primary-nav" aria-label="Primary">
+          <button class="nav-link is-active" type="button" data-screen="daily-puzzle">
+            Daily Puzzle
+          </button>
+          <button class="nav-link" type="button" data-screen="books-read">
+            Books Read
+          </button>
+        </nav>
+      </header>
+
+      <main class="screen-stack">
+        <section class="screen is-active" id="daily-puzzle" aria-labelledby="daily-puzzle-title">
+          <div class="screen-heading">
+            <p class="screen-kicker">Today's play</p>
+            <h2 id="daily-puzzle-title">Daily Puzzle</h2>
+            <p>
+              One short crossword, built from books on your shelf. This is a placeholder
+              shell for the puzzle experience.
+            </p>
+          </div>
+
+          <div class="screen-layout">
+            <div class="panel puzzle-panel">
+              <div class="panel-heading">
+                <div>
+                  <p class="panel-label">Grid</p>
+                  <h3>Today's Crossword</h3>
+                </div>
+                <p class="status-pill">Built from your books</p>
+              </div>
+
+              <div class="crossword-grid" aria-hidden="true">
+                <span></span><span></span><span class="block"></span><span></span><span></span><span></span>
+                <span></span><span class="block"></span><span></span><span></span><span class="block"></span><span></span>
+                <span></span><span></span><span></span><span class="block"></span><span></span><span></span>
+                <span class="block"></span><span></span><span></span><span></span><span></span><span class="block"></span>
+                <span></span><span></span><span class="block"></span><span></span><span></span><span></span>
+                <span></span><span class="block"></span><span></span><span></span><span class="block"></span><span></span>
+              </div>
+            </div>
+
+            <div class="panel clue-panel">
+              <div class="panel-heading">
+                <div>
+                  <p class="panel-label">Clues</p>
+                  <h3>Puzzle placeholder</h3>
+                </div>
+              </div>
+
+              <ol class="clue-list">
+                <li>The narrator who moves to West Egg.</li>
+                <li>The desert world ruled by spice.</li>
+                <li>A clue list will live here in a later step.</li>
+              </ol>
+
+              <div class="action-row">
+                <button type="button">Check</button>
+                <button type="button">Hint</button>
+                <button type="button">Reveal</button>
+                <button type="button">Finish</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="screen" id="books-read" aria-labelledby="books-read-title">
+          <div class="screen-heading">
+            <p class="screen-kicker">Your shelf</p>
+            <h2 id="books-read-title">Books Read</h2>
+            <p>
+              Search, add, and manage the books that will shape future puzzles.
+              This is a placeholder shell for the shelf experience.
+            </p>
+          </div>
+
+          <div class="screen-layout shelf-layout">
+            <div class="panel search-panel">
+              <div class="panel-heading">
+                <div>
+                  <p class="panel-label">Search</p>
+                  <h3>Find a book</h3>
+                </div>
+              </div>
+
+              <label class="search-field">
+                <span class="sr-only">Search for a book</span>
+                <input type="search" placeholder="Search for a book..." />
+              </label>
+
+              <div class="placeholder-copy">
+                Search results and add-book actions will be added in a later step.
+              </div>
+            </div>
+
+            <div class="panel shelf-panel">
+              <div class="panel-heading">
+                <div>
+                  <p class="panel-label">Shelf</p>
+                  <h3>Your books</h3>
+                </div>
+                <p class="status-pill">0 books yet</p>
+              </div>
+
+              <div class="book-card-grid">
+                <article class="book-card">
+                  <div class="cover-placeholder">Cover</div>
+                  <div>
+                    <h4>Example Book</h4>
+                    <p>Author name</p>
+                    <span class="book-status">Building clues</span>
+                  </div>
+                </article>
+                <article class="book-card muted">
+                  <div class="cover-placeholder">Shelf</div>
+                  <div>
+                    <h4>Your books will appear here</h4>
+                    <p>Added books become the source for daily crosswords.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
