@@ -91,54 +91,102 @@
         </section>
 
         <section class="screen" id="daily-puzzle" aria-labelledby="daily-puzzle-title">
-          <div class="screen-heading">
-            <p class="screen-kicker">Today's play</p>
-            <h2 id="daily-puzzle-title">Daily Puzzle</h2>
-            <p>
-              One short crossword, built from books on your shelf. This is a placeholder
-              shell for the puzzle experience.
-            </p>
+          <div class="puzzle-hero panel">
+            <div class="puzzle-hero-copy">
+              <p class="screen-kicker">Today's play</p>
+              <h2 id="daily-puzzle-title">Today's Crossword</h2>
+              <p>
+                Built from 6 of your books. One short puzzle, no pressure, and a
+                quick recap when you're done.
+              </p>
+            </div>
+
+            <div class="puzzle-meta">
+              <div class="meta-chip">
+                <span class="meta-label">Mode</span>
+                <strong>Mixed Shelf</strong>
+              </div>
+              <div class="meta-chip">
+                <span class="meta-label">Streak</span>
+                <strong>4 days</strong>
+              </div>
+              <div class="meta-chip">
+                <span class="meta-label">Size</span>
+                <strong>12 clues</strong>
+              </div>
+            </div>
           </div>
 
-          <div class="screen-layout">
+          <div class="screen-layout puzzle-layout">
             <div class="panel puzzle-panel">
               <div class="panel-heading">
                 <div>
                   <p class="panel-label">Grid</p>
-                  <h3>Today's Crossword</h3>
+                  <h3>Daily grid</h3>
                 </div>
-                <p class="status-pill">Built from your books</p>
+                <p class="status-pill">Normal mode</p>
               </div>
 
-              <div class="crossword-grid" aria-hidden="true">
-                <span></span><span></span><span class="block"></span><span></span><span></span><span></span>
-                <span></span><span class="block"></span><span></span><span></span><span class="block"></span><span></span>
-                <span></span><span></span><span></span><span class="block"></span><span></span><span></span>
-                <span class="block"></span><span></span><span></span><span></span><span></span><span class="block"></span>
-                <span></span><span></span><span class="block"></span><span></span><span></span><span></span>
-                <span></span><span class="block"></span><span></span><span></span><span class="block"></span><span></span>
+              <p class="puzzle-intro">
+                A few clues from books you've read. The source book stays hidden until
+                you answer or ask for help.
+              </p>
+
+              <div class="crossword-grid crossword-grid-large" aria-hidden="true">
+                <span data-cell="1"></span><span></span><span></span><span class="block"></span><span data-cell="4"></span><span></span><span></span><span></span>
+                <span></span><span class="block"></span><span data-cell="7"></span><span></span><span></span><span class="block"></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span class="block"></span><span></span><span></span><span class="block"></span>
+                <span class="block"></span><span data-cell="12"></span><span></span><span></span><span></span><span></span><span class="block"></span><span></span>
+                <span data-cell="15"></span><span></span><span class="block"></span><span></span><span></span><span></span><span></span><span></span>
+                <span></span><span class="block"></span><span></span><span></span><span class="block"></span><span data-cell="20"></span><span></span><span></span>
+                <span></span><span></span><span></span><span class="block"></span><span></span><span></span><span class="block"></span><span></span>
+                <span class="block"></span><span></span><span data-cell="25"></span><span></span><span></span><span class="block"></span><span></span><span></span>
               </div>
             </div>
 
             <div class="panel clue-panel">
               <div class="panel-heading">
                 <div>
-                  <p class="panel-label">Clues</p>
-                  <h3>Puzzle placeholder</h3>
+                  <p class="panel-label">Current clue</p>
+                  <h3>Across 4</h3>
                 </div>
+                <p class="status-pill">4 letters</p>
               </div>
 
-              <ol class="clue-list">
-                <li>The narrator who moves to West Egg.</li>
-                <li>The desert world ruled by spice.</li>
-                <li>A clue list will live here in a later step.</li>
-              </ol>
+              <blockquote class="current-clue">
+                The narrator who moves to West Egg.
+              </blockquote>
 
               <div class="action-row">
                 <button type="button">Check</button>
                 <button type="button">Hint</button>
                 <button type="button">Reveal</button>
                 <button type="button">Finish</button>
+              </div>
+
+              <div class="clue-columns">
+                <section>
+                  <div class="subpanel-heading">
+                    <p class="panel-label">Across</p>
+                  </div>
+                  <ol class="clue-list compact">
+                    <li><strong>4.</strong> The narrator who moves to West Egg.</li>
+                    <li><strong>7.</strong> The desert world ruled by spice.</li>
+                    <li><strong>12.</strong> A clue list will become dynamic later.</li>
+                    <li><strong>15.</strong> The giant peach owner of Manderley.</li>
+                  </ol>
+                </section>
+
+                <section>
+                  <div class="subpanel-heading">
+                    <p class="panel-label">Down</p>
+                  </div>
+                  <ol class="clue-list compact">
+                    <li><strong>1.</strong> The district where Katniss lives.</li>
+                    <li><strong>20.</strong> The boy who meets a tiger at sea.</li>
+                    <li><strong>25.</strong> A quiet placeholder for later logic.</li>
+                  </ol>
+                </section>
               </div>
             </div>
           </div>
